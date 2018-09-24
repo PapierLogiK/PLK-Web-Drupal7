@@ -5,13 +5,10 @@
 Data repository for PLK-Web on Drupal 7 from data issued from triqls between 2015 and 2018
 
 PapierLogik est un projet de recherche et développement éducatif, culturel et pratique visant à produire une base de donnée sur les recherches associées au papier et autres matériaux organiques ainsi que certains matériaux anciens ou innovants dans le domaine de l'électronique. 
-|            |  |  |  |
-| ---------- |--|--|--|
-
-
-développement industriel éconologique et raisonné
-| la vulgarisation et la mise en pratique de concept ludiques et accessibles |les études de recherche et développement à l'échelle universitaire et international|le développement de technologies innovantes|Des développements industriels éconologiques et raisonnés|
 | Categories |  |  |  |
+| ---------- |--|--|--|
+| la vulgarisation et la mise en pratique de concept ludiques et accessibles |les études de recherche et développement à l'échelle universitaire et international|le développement de technologies innovantes|Des développements industriels éconologiques et raisonnés|
+
 
 Le siteMap du projet Papier Logik est construit sur 2 axes partiellement liés permettant de générer 2 menus principaux (un menu eu haut de page et un menu en bas de page). Seul le menu en bas de page est exhaustif.
 Le premier axe présente le projet sur un scientifique et technique comme une storyboard du projet sur un niveau de difficulté et d'accessibilité gradué, pour se terminer sur une partie communauté, partage et mise en commun des branches du projet.
