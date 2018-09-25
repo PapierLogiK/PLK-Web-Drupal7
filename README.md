@@ -6,7 +6,7 @@
 
 PapierLogik est un projet de recherche et développement éducatif, culturel et pratique visant à produire une base de donnée sur les recherches associées au papier et autres matériaux organiques ainsi que certains matériaux anciens ou innovants dans le domaine de l'électronique. 
 
-| PLK Objectives | -- | -- | -- |
+| PLK Objectives |
 | -------------- | -- | -- | -- |
 | la vulgarisation et la mise en pratique de concept ludiques et accessibles | les études de recherche et développement à l'échelle universitaire et international | le développement de technologies innovantes|Des développements industriels éconologiques et raisonnés |
 
