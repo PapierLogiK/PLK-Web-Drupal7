@@ -26,6 +26,6 @@ Voici les 5 thèmes et sous-thèmes du menu principal (top menu) explorés sur l
 | IV- Reinvent | IV-1 : State of the Art in paper based Electronics | IV-2 : Current Research | IV-3 : Current Developments |
 | V- Share | V-1 : User's Blogs | V-2 : User's Forums | V-3 : Collaborative Projects |
 
-** TO DO: Explications détaillées?? **
+**  TO DO: Explications détaillées??  **
 
 ## Exhaustive Map: on date
