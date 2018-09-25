@@ -18,10 +18,10 @@ Le second axe est un Sitemap exhaustif classant les pages via une arborescence a
 
 Voici les 5 thèmes et sous-thèmes du menu principal (top menu) explorés sur le site de papier logik autour des nouvelles technologies hardware et software dans le but d’accompagner les évolution dans le domaine du « Do it Yourself » pour un large public mais également fournir des resources et des moyens plus poussés pour la communauté active de chercheurs et de développeurs dans ce domaine. 
 
-| Categories |  |  |  |
+| StoryBoard |  |  |  |
 | ---------- |--|--|--|
-| I- Discover | I-1 : Paper-based Electronics | I-2 : Do it Yourself | I-3 : Open-Source Hardware & Software) |
-| II- Grow Seeds (Back to basic Courses and knowledge) | II-1 : Materials Science | II-2 : Electronics | II-3 : Information Technologies |
+| I- Experience | I-1 : Paper-based Electronics | I-2 : Do it Yourself | I-3 : Open-Source Hardware & Software) |
+| II- Practice | II-1 : Back to Basics | II-2 : DIY Electronics | II-3 : Information Technologies |
 | III- Reproduce ( Resources ) | III-1 : Paper-based Touch Sensors | III-2 : DIY Electronics | II-3 : Open Source Softwares |
 | IV- Reinvent | IV-1 : State of the Art in paper based Electronics | IV-2 : Current Research | IV-3 : Current Developments |
 | V- Share | V-1 : User's Blogs | V-2 : User's Forums | V-3 : Collaborative Projects |
