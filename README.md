@@ -6,7 +6,6 @@
 
 PapierLogik est un projet de recherche et développement éducatif, culturel et pratique visant à produire une base de donnée sur les recherches associées au papier et autres matériaux organiques ainsi que certains matériaux anciens ou innovants dans le domaine de l'électronique. 
 
-|  |  |  |  |
 | ---------- |--|--|--|
 | la vulgarisation et la mise en pratique de concept ludiques et accessibles | les études de recherche et développement à l'échelle universitaire et international | le développement de technologies innovantes|Des développements industriels éconologiques et raisonnés |
 
@@ -18,7 +17,7 @@ Le second axe est un Sitemap exhaustif classant les pages via une arborescence a
 
 Voici les 5 thèmes et sous-thèmes du menu principal (top menu) explorés sur le site de papier logik autour des nouvelles technologies hardware et software dans le but d’accompagner les évolution dans le domaine du « Do it Yourself » pour un large public mais également fournir des resources et des moyens plus poussés pour la communauté active de chercheurs et de développeurs dans ce domaine. 
 
-| StoryBoard |  |  |  |
+| StoryBoard |  |  |  |  |
 | ---------- |--|--|--|
 | I- Experience | I-1 : Paper-based Electronics | I-2 : Do it Yourself | I-3 : Open-Source Hardware & Software) |
 | II- Practice | II-1 : Back to Basics | II-2 : DIY Electronics | II-3 : Information Technologies |
@@ -29,3 +28,5 @@ Voici les 5 thèmes et sous-thèmes du menu principal (top menu) explorés sur l
 **  TO DO: Explications détaillées??  **
 
 ## Exhaustive Map: on date
+
+**  TO DO: Structure en Arbre  **
