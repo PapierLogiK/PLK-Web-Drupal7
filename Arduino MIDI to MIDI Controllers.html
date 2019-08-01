@@ -1,0 +1,127 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="//www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+    	<script>
+		$(function(){
+			var index = 0;
+			var t = $('#FabGuideVerticalEasyUITabs');
+			var tabs = t.tabs('tabs');
+			
+		});
+	</script>
+
+
+<div id="intro">
+<p>Arduino programmers have provided a few examples for wiring a MIDI cable to an arduino board and input/output MDI messages from and towards peripheral that will understand these messages, such as many digital synthetisers.</p>
+
+<p>The arduino Community has also widely explored these concepts. We provide here a guideline based on such resources to help you build up your own custom controller to be used with other MIDI hardware.</p>
+
+<p>Arduinos and other development boards can also transmit MDI information to a computer or a smartphone using others boardsm softwares or applications. These concpts are detailled in thes MIDI to USB and Teensy Board pages.</p>
+</div>
+
+
+<div class="easyui-tabs" id="FabGuideVerticalEasyUITabs" >
+	<div title="Custom MIDI to MIDI Controller">
+        <h2>Custom MIDI to MIDI Controller</h2>
+		<p> You will basically need 4 things to build a custom midi controller:</p>
+		<ul> 
+			<li> An arduino board that will operate digital signals Events from the sensors to the MIDI Peripherals</li>
+			<li> A MIDI wire that will enable to connect to MIDI peripherals and trnsmit or receive MIDI commands.</li>
+			<li> Sensors that will turn your gesture into analog signals read with the arduino. </li>
+			<li> An arduino program that will manage the sensors signals and turn them into Events and MIDI Commands.</li>
+			
+		</ul>
+		
+		
+        <p>A MIDI cable must be first wired as shown below if you want to be able to connect your board to MIDI Eauipments.
+		<img alt="MIDI Out Wiring" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/Arduino MIDI Out Wiring.png" /> 
+		</p>
+		<p>You will also need to use or build sensors or other hacked peripherals such as a gamepad to provide you controller sensitive inputs to trigger or control your sounds. 
+		 </p>       
+        <p><img alt="Sensors Implementation" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/Sensors Implementation.png" /> 
+		Paper force sensors can be built at low cost at any size or shape which makes an interesting input to start with. You can plug them through a voltage divider either onto a digital pin to get a digital on/off triggerm or onto an analog pin if you want to get a more refined signal of the force applied.
+		</p>
+		<p>Last, you need to feed your board with an .ino program that will read you input signals, detect specific touch events and map these to MIDI commands. 
+		<img alt="Code" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/MIDI Code Arduino.png" /> 
+		</p>
+	
+		
+	</div>
+	
+
+	<div title="Wiring MIDI Out Connectors">
+		<h2>Wiring MIDI Connectors</h2>
+		<p> MIDI Devices are usually able to transmit and/or receive MIDI data through different cables and connectors using the same male-female MIDI cable. MIDI In connectors will recive data while MIDI Out connectors will transmit data.</p>
+		
+		<p><img alt="MIDI Out Wiring" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/MIDI IN OUT CONNECTIONS EXAMPLE AND CABLES.png" /> 
+		A MIDI controller mainly needs to be able to send data to a sond synthetiseer. We must then connect a MIDI Out cable that can be pluged to MIDI Inputs of :IDI instruments. 
+		 </p>
+		 <p>MIDI Cables have 5 wires for 5 male pins or 5 pin holes distributed along half a circle as show below with a male connector. You need to connect only three wires to an ADC so that you cable can properly transmit data to a external MIDI Input.
+		<img alt="MIDI Out Wiring" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/MIDI Out Wiring Cable plugged onto an ADC.png" /> 
+		 </p>
+		<p> In the case of Arduino Boards:  </p>
+		<ul> 
+			<li>  MIDI jack pin 5 connected to a Digital pin (here pin 1) through a 220 ohm resistor</li>
+			<li> MIDI jack pin 2 connected to ground</li>
+			<li>  MIDI jack pin 4 connected to +5V through a 220 ohm resistor.  </li>
+			
+		</ul>
+		 <p> More detailled information are widely available on <a href="http://arduino.cc" target="_blank">arduino.cc</a>  </p>
+		
+		
+        
+	</div>
+	
+
+	<div  title="Wiring MIDI In and Out Connectors">
+		<h2>Wiring MIDI In and Out Connectors</h2>
+		<p>With the MIDI cable connected as below,the board can only end MIDI commands:
+		<img alt="MIDI Out Wiring" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/MIDI Out Connector to send MIDI from an Arduino.png" /></p>
+        <p> A more complete peripheral may require also to input data messages for feedback communication or machine to machine composition.</p>
+		<p> Detailled ractical instructions for setting up you hardware can already be found <a href="https://www.instructables.com/id/Send-and-Receive-MIDI-with-Arduino/" target="_blank"> for instance on instructables </a> if needed.</p>
+		
+		<p> <img alt="MIDI Out Wiring" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/MIDI Connector wired for MIDI In Message reception to an Arduino.png" /> 
+		</p>
+		<p> MIDI cables can only be used with MIDI peripheral. However MIDI can also be used on a computer or a smartphone using a USB connection as described in the next tab. 
+		</p>
+	</div>
+
+
+	<div  title="MIDI to USB alternative">
+		<h2>USB alternative</h2> 
+	<p> MIDI to USB adapters would enable you to connect your MIDI in and MIDI out cables to a USB connector. MIDI messages can then be transmitted through a serial port and will trigger any MIDI events setup in a third party application such as a MIDI synthetiser.</p>
+	<p> <img alt="MIDI Out Wiring" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/MIDI to USB Cable.png" /> 
+		</p>
+	<p>Specific ADC boards such as Teensy Boards can also able to convey directly MIDI signals through their serial port, thus removing the needs for MIDI cables. An Example of Multitouch MIDI controller using a Teensy and a paper force-sensors array is shown below.
+	</p>
+	
+	
+	<p> MIDI In and Out cables can also be replaced by a single USB cables and complimentary softwares so as to transmit serial data and let thecomputer application manage the MIDI processing part. 
+	</p>
+	<p>The Arduino wbstie also provides instructions for sucha strategy <a href="https://www.arduino.cc/en/Tutorial/MidiDevice" target="_blank"> here</a></p>
+	<p> THis will either involve to specific  <a href="https://www.arduino.cc/en/Reference/MIDIUSB" target="_blank"> libraries</a> or even hardware like to Teensy Board.</p>
+  
+	</div>
+
+
+	<div  title="Simple Sensors Controller Fabrication">
+		<h2>Simple Sensors Controller Fabrication</h2>
+
+		<p> Arrays of Force sensors are the simplest design to implement to quickly build low-cost but efficient multitouch interfaces. Qn example of such an application using a teensy board and an arry of 144 anaol keys split into 12 lines of 12 keys is presented here.</p>
+		<p> You can also design any kind of touch or gesture controllers through the fabrication of single touch sensorsm or even any hacked input peripheral such as a mouse or a gamepad.</p>
+		<p><img alt="MIDI Out Wiring" class="img1" src="http://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/7-2-Paper-Sensors-Fabrication-Guides.png" style="height:160px; width:160px" /> Conductive papers enable the production of a large variety of electronic components such as touch sensors and finger size force sensor.</p>
+
+		<p>Once the component is operational it should be at least insulated and reinforced using a paper-based adhesive. For higher shear resistance (i.e. finger touch vs foot-pressure) and lower moisture variations (e.g. used inside vs outside) and short vs long life-time), Thermoplastic adhesives will provide more durable solutions</p>
+	</div>
+
+	<div  title="Basic Arduino Code Example">
+		<h2>Arduino Code Example</h2>
+
+		<p>Arduimo provides many application examles of the MIDI library. The most basic applications consists in triggering a MIDI note on and Off using a button of any control sensor as detailled on Arduino website.
+		<img alt="Code" class="img1" src="https://www.papierlogik.com/sites/all/themes/papierlogik19/css/contrib/images/GrowSeeds/MIDI/MIDI Code Arduino.png" /> 
+		</p>
+		<p>But MIDI messages can convey a lare variety of other musical information such as instrument or channel change as well as a variety of sound morphing such as pitchbend, aftertouch or polyphonic expression.
+		MIDI sounds can also be highly enriched using other softwares such as VST for instance. All these concept require advanced practical knowledge that will be detatilled in the next course level on MIDI.</p>
+		
+	</div>
+
+</div>

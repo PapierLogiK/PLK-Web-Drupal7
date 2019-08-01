@@ -1,0 +1,169 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="//www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+    	<script>
+		$(function(){
+			var index = 0;
+			var t = $('#FabGuideVerticalEasyUITabs');
+			var tabs = t.tabs('tabs');
+			
+		});
+	</script>
+
+
+<div id="fab-guide-intro">
+	<p></p>
+	<p>Build Efficient and Econologic DIY Position Sensors: </p>
+	<p></p>
+	<p></p>
+	<p>Learn how to exploit the surface resistance of conductive layers to produce linear touch potentiometers and variations of such concepts .</p>
+	<p></p>
+	<p></p>
+	<p>Start building small linear slider, and extend the concept to larger sizes or non-linear shapes and designs exploiting surface conductivity variations.</p>
+</div>
+
+
+<div class="easyui-tabs" id="FabGuideVerticalEasyUITabs" >
+	<div title="LTP Principle">
+        <h2>Linear Touch Potentiometer Principle</h2>
+                
+       <p>Volume conductive papers have a relatively uniform resistivity. Thus, the electrical resistance measured between 2 points along such a material is directly function of this resistivity and of the dimensions of the material to be studied, a bit like a water flow in a pipe is function of the gravity and of he pipe dimensions.</p>
+
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LtP PE 04-20cm Measure.gif" title="Electrical Resistance VS Materials Length" />
+		<p>Thus, if we plot the resistances over a band of Volume Conductive Paper E of 1cm, varying the distance of the electrodes along its length, we will obtain a relatively straight line whose slope corresponds to the materials resistivity times its section.</p>
+		<p>It then simply takes to design a component that uses this concept to associate to a given single-touch contact a resistance that is function of its dimension: touching the component will engender a local contact between 2 layers that do not touch by default.</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Design Position Touch 1D overview.png" title="Linear Touch Potentiometer Overview" />
+		
+</div>
+	
+
+	<div title="DIY Fab Guide">
+		<h2>DIY Quick Fab Guide</h2>
+		<p>We start providing simple fabrications steps for producing easily and efficiently one-axis sliders. We then provide variations and extensions of such designs along with useful fabrications tricks, as well as implementation methods for Arduino and Application examples.</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Design Position Touch 1D overview.png" title="Linear Touch Potentiometer Overview" />
+		
+        <p>Linear Potentiometers are usually thin and long strips with 3 pins providing a signal that varies with the position of the contact applied along the sensor's length.</p>
+		<p> Our favorite design consist in bulding both a force and position sensor. Indeed, position can be cleverly implemented through a wiper system as designed above, but such a designed sensor will output no value when no contact is applied.</p>		
+		<p>Moreover, the contact surface and force variations will generate variations in the signal.</p> 
+		<p>Thus, a signal of the force applied can also be measured and used to set a measurement treshold for the position signal, as if there were2 sensors acting together.</p> 
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/Schema-Detaillle-Capteur PLRS-Force+Position.png" title="Schema-Detaillle-Capteur PLRS-Force+Position " />
+		
+	</div>
+	
+
+	<div  title="Design &amp; Raw Material">
+		<h2>Design &amp; Raw Material</h2>
+
+        <p>We propose here to build a LTP of 22cm * 2 cm Width, with an sensitive area of 20cm * 1cm. For this you will need:</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Prod - Resources.png" style="height:auto; width:50%" title="LTP Prod - Resources" />
+		
+		<ul>
+			<li>Two bands of Electrode Paper E of 20cm * 1.2cm or any other uniformly resistive material(500 Ω to 1kΩ / cm)</li>
+			<li>Two bands of Metal Adhesive of 22cm length (or electronic wires)</li>
+			<li>One band of transparent plastic insulator of 20cm * 2cm</li>
+			<li>Some adhesive tape or glue</li>
+			<li>Optionnally a piece of thin Cardboard (150-250 GSM) cut into a frame and used as spacer of 22cm * 4 cm</li>
+			 
+			<li>Optionnally, one band of Sensitive Paper S of 20cm * 1.2cm or any other uniformly resistive material(500 Ω to 50kΩ / cm)</li>
+			
+		</ul>
+		
+	
+	</div>
+
+
+	<div  title="Assembling Materials">
+		<h2>Assembling Materials</h2>
+
+       <p>Mount and temporarily fix the elements using removable adhesive in order to test your sensor before finalising its encapsulation.</p>
+	   
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Prod - Place the resistive band and connectors.png" style="height:auto; width:50%" title="LTP Prod - Place the resistive band and connectors" />
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Prod - Place the spacer.png" style="height:auto; width:50%" title="LTP Prod -  Place the spacer." />
+		<p> The use of a spacer is optional when using paper electrodes: the layers can be in direct contact but these must not be firmly compressed.</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Prod - Place the Electrode.png" style="height:auto; width:50%" title="LTP Prod - Place the Electrode" />
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Prod - Wrap the whole.png" style="height:auto; width:50%" title="LTP Prod - Wrap the whole" />
+
+	</div>
+
+
+	<div  title="Pre-Test &amp; Optimise">
+		<h2>Pre-Test &amp; Optimise</h2>
+		
+		<p>You should test your sensor with a microcontroller. Arduino users can use the example file "analogRead" and plug the sensor to Vin, A0 and Ground.</p>
+
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/Position-sensor-to-arduino_0.png" style="height:auto; width:50%" title="Position-sensor-to-arduino_0" />
+
+		<p>You can also test the sensor with a multimeter reading the resistance between the Signal Spin and the ground pin, which should be "infinite" (open circuit) by default and from 1 to 20 times the materials resistivity (e.g. 1kOhms/cm for Volume conductive Paper 1K) when sliding the finger from 1cm to 20cm from the connectors.</p>
+
+		<p>The resistance between the Signal Spin and the Voltage input pin should also be "infinite" (open circuit) by default and drop from 20 to 1 times the materials resistivity (e.g. 1kOhms/cm for Volume conductive Paper 1K) when sliding the finger from 1cm to 20cm from the connectors side.</p>
+		
+		
+	</div>
+
+	<div  title="Encapsulate and mount">
+		<h2>Encapsulate and mount</h2>
+		
+		<p>Once your sensor is operational, you can solidify it more permanently using glue or any convenient adhesive layer that will serve as a protection layer and can be painted or printed for visual feedback.</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/LTP Prod - Wrap the whole.png" style="height:auto; width:50%" title="LTP Prod - Wrap the whole" />
+
+		<p>Such sensor can hardly be bent or folded as this would generate unwanted contact between the two layers. These sensor are then usually bonded to a flat and rigid surface for optimal efficiency.</p>
+
+		<p>You can then now enjoy you product and try to build other types of linear potentiometers and related fabrication tricks.</p>
+		
+
+	</div>
+	
+		<div  title="Other Design &amp; Tricks">
+		<h2>Other Design &amp; Tricks</h2>
+		
+		<p>The previous tutorial is only an example among many possible variations of resistive paper-based potentiometers.</p>
+		<h3>Full Paper Solutions</h3>
+		<p>The same design can for instance be build using 100K paper instead of the 1K paper as resistor, and in such case, for sensors below 20cm length, 1K conductive paper can replace metal adhesives.</p>
+		<p>On can also use twice the same paper and read the varying resistance with a conventional voltage divider and an independant adapted resistor.</p>
+		
+		
+		<h3>Non Linear Touch Potentiometer Design</h3>
+		<p>On can also design non-linear and more complex paths such as the famous rotary potentiometer found on I-Pods.</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/Rounded-Linear-Touch.png" style="height:auto; width:50%" title="Rounded-Linear-Touch" />
+	
+		<h3>Adding a Pot</h3>
+		<p>Another strategy can consist in adding a third part that can be moved and make a finer stable contact, just like the potentiometers found on a miking table.</p>
+	
+		<h3>Multiple Lines and dimensions</h3>
+		<p>The width of the design proposed earlier can be adapted to the user needs: for instance, if one want to reproduce a touchpad, he can design two square position sensors and cross them so as to be able to read the X-Y position of a single touch. A force sensor of the same size can also be added underneath if the value of the force applied is also of interest.</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/Force+PositionX-Y.png" style="height:auto; width:50%" title="Force+PositionX-Y" />
+		<p>For better signals, especially on the sides of a wide design, it is preferable to build the resistive layers as spaced strips of narrowed width (eg. 1-2cm).</p>	
+	</div>
+	
+	
+
+	
+	<div  title="Implementation">
+		<h2>Position Sensors Implementation</h2>
+		<p>The major advantage of the design above is that it should provide a linear response that is exactly proportional to the distance of the contact applied from ground. The linearity can however get disrupted when reaching the extremities of the sensor, and scaling the signal can be of interest here.</p>
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Excel Voltage Divider - Plot_0.png" style="height:521px; width:567px" title="Excel Voltage Divider" />
+		<p>This sensor also provide an unstable signal by default as there is no contact between the signal pin read and ground by default. This can be solved by adding a fix high value resistor (e.g. 1 MΩ) between the signal and the ground pin, or one can filter unstable values through basic programming.</p>
+
+		<p>Other DSP methods have been developed to be able to detect and locate multiple touch position( 2 to 3) along the sensitive surface by simple physics calculations and deductions: this takes to detect consecutive signals variations due to new contact events and recalculate the theoretical resistance values for each new position from the previous positions data and a formula representing the equivalent circuit for multiple contacts. The difficulty from 3 contacts is to deduce from signals variations de total number of contacts, which limits such implementations.</p>
+			
+	</div>
+	
+	<div  title="Application Examples">
+		<h2>Application Examples</h2>
+		<p>Such sensors are usually used in various computer control peripherals such as DJ or VJ Tools. They are also especially used in professional and industrial equipments using custom control panels.</p>
+		
+		<img alt="" class="centered-img" src="/sites/all/themes/papierlogik19/css/contrib/images/Fabrication/Linear Position/Linear Touch position sensors and chord instruments position detection using one band of resistive paper.jpg" style="height:auto; width:50%" title="Linear Touch position sensors and chord instruments position detection using one band of resistive paper" />
+		
+		<p>Papier Logik users have also found a variety of applications from precise measurement tools to various kinds of Human Computer Interfaces.</p>
+
+		<p>We especially focused at start to reproduce string elements or alternate ribbon controllers for the exploration of paper-sensors potentials. Various strategies can enable to quickly "augment" an existing instrument'sm functionalitya or else reproduce and existing instrument with paper sensors, or else create a new alternate instrument.</p>
+
+		<h3>Larger Surfaces</h3>
+
+		<p>Paper-Based LTP have also been developed for the production of larger tactile surfaces such as wall potentiometers that enable to switch lights On and Off by simple touch, and to control lights intensity by sliding hands up or down along the wall. Such sensors can be embedded onto any flat and rigid surface in a house that could be thought as a controller for multimedias and other home-automation technologies.</p>
+
+		<p>Regarding tactile applications on the floor, the use of Force Sensing Tiles or else embedded tactile arrays of larger scale are more appropriate, durable and efficient for Human control Interactions over ground surfaces.</p>
+		
+		
+	</div>
+
+</div>
